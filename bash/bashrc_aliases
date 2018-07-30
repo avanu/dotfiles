@@ -1,0 +1,23 @@
+# vim:ft=sh
+
+# misc
+alias dv='echo -e "\033[1;30m────────────────────────────────────────────────────────────────────────────────\033[0m"'
+alias wtf='echo -e "\033[1;35m           _    __\n          | |  / _|\n __      _| |_| |_\n \ \ /\ / / __|  _|\n  \ V  V /| |_| |\n   \_/\_/  \__|_|\033[0m\n"'
+alias cdl='cd && clear'
+
+# navigation
+alias ll='echo -en " \033[1;33m--> \033[0m" && echo -n $PWD && echo -e "\033[1;33m <-- \033[0m" && ls -lh'
+alias la='ll -a'
+alias ls='ls -G' # recursive calls (using ls in alias calls the aliased ls)
+
+# grep
+alias grep='grep --color=auto'
+
+# docker
+#eval "$(docker-machine env default)"
+#alias dockenv='eval "$(docker-machine env default)" && echo "Successfully set Docker environment"'
+#alias dockcheck='dv && docker ps -a && dv && docker images -a && dv'
+#alias dockclean='docker rm -vf `docker ps -qa` && dockcheck'
+#alias dockwipe='docker rmi -f `docker images -q` && dockcheck'
+alias docker-cleanup='(docker rm -f $(docker ps -a -q); docker rmi -f $(docker images -q))'
+

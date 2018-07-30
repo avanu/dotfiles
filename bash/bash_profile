@@ -1,0 +1,16 @@
+# vim:ft=sh
+
+# path
+export PATH="/usr/local/sbin:$PATH"
+
+# include .bashrc_aliases file if it exists
+if [ -f $HOME/.bashrc_aliases ]; then
+    . $HOME/.bashrc_aliases
+fi
+
+# include work Ryte if it exists
+if [ -f $HOME/.bashrc_ryte ]; then
+    . $HOME/.bashrc_ryte
+fi
+
+
