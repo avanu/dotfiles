@@ -15,3 +15,10 @@ ln -fs /Users/${USER}/.dotfiles/tmux/tmux-startup-session.conf /Users/${USER}/.t
 ln -fs /Users/${USER}/.dotfiles/vim/gvimrc /Users/${USER}/.gvimrc
 ln -fs /Users/${USER}/.dotfiles/vim/vimrc /Users/${USER}/.vimrc
 ```
+
+## Git
+```bash
+# https://help.github.com/articles/ignoring-files/
+ln -fs /Users/${USER}/.dotfiles/git/gitignore_global /Users/${USER}/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+```
