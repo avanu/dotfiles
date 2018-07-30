@@ -1,0 +1,10 @@
+" VIM SETTINGS FILE (GUI)
+" ================================================================
+
+" appearance
+colorscheme base16-default-light
+set guifont=Hack:h12
+set background=light
+
+" use visual bell
+set vb

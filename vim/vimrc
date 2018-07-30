@@ -1,0 +1,211 @@
+" VIM SETTINGS FILE
+" ====================================================================== 
+
+
+" PATHOGEN
+" ---------------------------------------------------------------------- 
+" enable the pathogen plugin manager
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
+
+" PLUGIN SETTINGS
+" ---------------------------------------------------------------------- 
+" vim-markdown: disable folding
+" let g:vim_markdown_folding_disabled=1
+"
+" vim-markdown: set initial folding level
+let g:vim_markdown_initial_foldlevel=15
+
+
+" NETRW FILE EXPLORER
+" ---------------------------------------------------------------------- 
+
+" Show detailed file list (0=thin, 1=long, 2=wide, 3=tree)
+let g:netrw_liststyle=3
+
+" Make vertical splitting the default for previewing files
+let g:netrw_preview=1
+
+" When a vertical preview window is opened, the directory listing  
+" will use only 35% of the columns available; the rest of the
+" window is used for the preview window.
+let g:netrw_winsize=30
+
+" Disable menu
+" let g:netrw_menu=0
+
+" Disable banner (experimental)
+let g:netrw_banner=0
+
+" Change from above splitting to below splitting
+let g:netrw_alto=1
+
+" Change from left splitting to right splitting
+let g:netrw_altv=1
+
+" <cr> will open file by
+" 0 - re-using same window
+" 1 - horizontal window split
+" 2 - vertical window split
+" 3 - open in new tab
+" 4 - like 'P', open previous window
+let g:netrw_browse_split=0
+
+
+" COLOR SETTINGS
+" ---------------------------------------------------------------------- 
+
+" Enable 256 colors - this actually isn't necessary if the terminal is
+" already set to use 256 colors
+set t_Co=256
+
+" Set color scheme
+colorscheme slate
+
+" Enable syntax highlighting
+syntax on
+
+
+" HIGHLIGHTING
+" ---------------------------------------------------------------------- 
+
+" Highlight line number of current line
+" :highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE 
+" guibg=NONE guifg=NONE
+" highlight CursorLine cterm=NONE
+" highlight CursorLineNr cterm=bold ctermbg=NONE ctermfg=gray
+" set cursorline
+
+" Mark line length (max. 130 chars)
+" highlight LineTooLong cterm=bold ctermbg=darkgray ctermfg=white 
+" highlight LineTooLong guibg=white
+" match LineTooLong /\%>130v.\+/
+
+" Make matching parantheses more visible
+highlight MatchParen ctermbg=darkgreen ctermfg=white
+
+" Better colors for search highlights
+" using only IncSearch because insearch is activated
+highlight IncSearch ctermbg=yellow ctermfg=black
+highlight Search ctermbg=green ctermfg=black
+
+" INDENTATION
+" ---------------------------------------------------------------------- 
+" For indentation without tabs, the principle is to set 'expandtab', and 
+" set 'shiftwidth' and 'softtabstop' to the same value, while leaving 
+" 'tabstop' at its default value: 
+" http://vim.wikia.com/wiki/Indenting_source_code
+
+" Indentation settings for using 4 spaces instead of tabs.
+set softtabstop=4
+
+" Number of space characters inserted for indentation
+set shiftwidth=4
+
+" Insert space characters whenever the tab key is pressed
+set expandtab
+
+" Number of spaces that will be inserted when the tab key is pressed
+" set tabstop=4
+
+" Copy the indentation from the previous line, when starting a new line.
+" It can be useful for structured text files, or when you want to 
+" control most of the indentation manually, without Vim interfering
+" set autoindent
+
+" Attempt to determine the type of a file based on its name and possibly
+" its contents. Use this to allow intelligent auto-indenting for each 
+" filetype, and for plugins that are filetype specific.
+" This command will use indentation scripts located in the indent 
+" folder of your vim installation
+filetype indent plugin on
+
+
+" SEARCH/REPLACE
+" ---------------------------------------------------------------------- 
+
+" Don't wrap (i.e. skip to beginning or end) when searching
+set nowrapscan
+
+" Activate incremental search 
+" (go to first matching result while searching)
+" set incsearch
+
+" Highlight search results
+set hlsearch
+
+
+" FOLDING
+" ---------------------------------------------------------------------- 
+
+" Enable folding
+set foldenable
+
+" Set folding method
+set foldmethod=indent
+
+" Set folding level on startup
+set foldlevelstart=15
+
+
+" OTHER SETTINGS
+" ---------------------------------------------------------------------- 
+
+" Set 'nocompatible' to ward off unexpected things that your distro 
+" might have made, as well as sanely reset options when 
+" re-sourcing .vimrc
+set nocompatible
+
+" Display line numbers on the left
+set number
+
+" one of the most important options to activate. Allows you to switch 
+" from an unsaved buffer without saving it first. Also allows you to 
+" keep an undo history for multiple files. Vim will complain if you try 
+" to quit without saving, and swap files will keep you safe if your 
+" computer crashes.
+set hidden
+
+" Show partial commands in the last line of the screen
+set showcmd
+
+" Modelines have historically been a source of security vulnerabilities. 
+" As such, it may be a good idea to disable them and use the 
+" securemodelines script: 
+" <http://www.vim.org/scripts/script.php?script_id=1876>.
+set nomodeline
+
+" Display the cursor position on the last line of the screen or in the
+" status line of a window
+set ruler
+
+" Always display the full path in the status line
+"  -> this seems to disable the cursor position / needs to be looked into
+" set statusline+=%f
+
+" Always display the status line, even if only one window is displayed
+set laststatus=2
+
+" Disable vim splash message (uganda)
+set shortmess+=I
+
+" Better command-line completion
+" check :help wildmenu
+" you would need something like Longest:full to use the wildmenu so 
+" it's disabled at the moment
+" set wildmenu
+
+" Set filename completion akin to bash (first tab)
+" check :help wildmode
+set wildmode=longest,full
+" set wildmode=longest,list,full
+
+" Open split window below the current window
+set splitbelow
+
+" Fix backspace issue
+set backspace=indent,eol,start
+
+" Support for markdown files with .md extension
+" autocmd BufNewFile,BufReadPost *.md set filetype=markdown
