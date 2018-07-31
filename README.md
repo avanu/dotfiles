@@ -32,4 +32,7 @@ ln -fs /Users/${USER}/.dotfiles/vim/vimrc /Users/${USER}/.vimrc
 # https://help.github.com/articles/ignoring-files/
 ln -fs /Users/${USER}/.dotfiles/git/gitignore_global /Users/${USER}/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
+
+git config --global user.name "<tbd>"
+git config --global user.email "<tbd>"
 ```
