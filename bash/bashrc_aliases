@@ -20,4 +20,4 @@ alias grep='grep --color=auto'
 #alias dockclean='docker rm -vf `docker ps -qa` && dockcheck'
 #alias dockwipe='docker rmi -f `docker images -q` && dockcheck'
 alias docker-cleanup='(docker rm -f $(docker ps -a -q); docker rmi -f $(docker images -q))'
-
+# docker stop $(docker ps -q)
