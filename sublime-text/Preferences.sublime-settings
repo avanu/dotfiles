@@ -1,4 +1,14 @@
 {
+	// Sets the colors used within the text area
 	"color_scheme": "Packages/Color Scheme - Default/Celeste.sublime-color-scheme",
-	"auto_match_enabled" : false
+
+	// ?
+	"auto_match_enabled" : false,
+
+	// Note that the font_face and font_size are overridden in the platform
+    // specific settings file, for example, "Preferences (Linux).sublime-settings".
+    // Because of this, setting them here will have no effect: you must set them
+    // in your User File Preferences.
+	"font_face": "PragmataPro",
+	"font_size": 14,
 }
