@@ -7,14 +7,19 @@ git clone git@github.com:avanu/dotfiles.git .dotfiles
 
 ## bash
 ```bash
-ln -fs /Users/${USER}/.dotfiles/bash/bash_profile /Users/${USER}/.bash_profile
-ln -fs /Users/${USER}/.dotfiles/bash/bashrc_aliases /Users/${USER}/.bashrc_aliases
+ln -fs ~/.dotfiles/bash/bash_profile ~/.bash_profile
+ln -fs ~/.dotfiles/bash/bashrc_aliases ~/.bashrc_aliases
+```
+
+## Sublime Text 3
+```bash
+ln -fs ~/.dotfiles/sublime-text/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings
 ```
 
 ## tmux
 ```bash
-ln -fs /Users/${USER}/.dotfiles/tmux/tmux.conf /Users/${USER}/.tmux.conf
-ln -fs /Users/${USER}/.dotfiles/tmux/tmux-startup-session.conf /Users/${USER}/.tmux-startup-session.conf
+ln -fs ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
+ln -fs ~/.dotfiles/tmux/tmux-startup-session.conf ~/.tmux-startup-session.conf
 ```
 
 ## Vim
@@ -23,14 +28,14 @@ ln -fs /Users/${USER}/.dotfiles/tmux/tmux-startup-session.conf /Users/${USER}/.t
 - optional vim packages: [Securemodelines](https://github.com/ciaranm/securemodelines), [Solarized](https://github.com/altercation/vim-colors-solarized), `vim-tomorrow-theme`, etc.
 
 ```bash
-ln -fs /Users/${USER}/.dotfiles/vim/gvimrc /Users/${USER}/.gvimrc
-ln -fs /Users/${USER}/.dotfiles/vim/vimrc /Users/${USER}/.vimrc
+ln -fs ~/.dotfiles/vim/gvimrc ~/.gvimrc
+ln -fs ~/.dotfiles/vim/vimrc ~/.vimrc
 ```
 
 ## Git
 ```bash
 # https://help.github.com/articles/ignoring-files/
-ln -fs /Users/${USER}/.dotfiles/git/gitignore_global /Users/${USER}/.gitignore_global
+ln -fs ~/.dotfiles/git/gitignore_global ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 
 git config --global user.name "<tbd>"
