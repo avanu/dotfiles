@@ -17,10 +17,5 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
 # docker
-#eval "$(docker-machine env default)"
-#alias dockenv='eval "$(docker-machine env default)" && echo "Successfully set Docker environment"'
-#alias dockcheck='dv && docker ps -a && dv && docker images -a && dv'
-#alias dockclean='docker rm -vf `docker ps -qa` && dockcheck'
-#alias dockwipe='docker rmi -f `docker images -q` && dockcheck'
-alias docker-cleanup='(docker rm -f $(docker ps -a -q); docker rmi -f $(docker images -q))'
-# docker stop $(docker ps -q)
+alias docker-cleanup='docker system prune -af --volumes'
+
