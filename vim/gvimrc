@@ -3,7 +3,7 @@
 
 " appearance
 colorscheme base16-default-light
-set guifont=Hack:h12
+set guifont=PragmataPro:h13
 set background=light
 
 " use visual bell
