@@ -97,17 +97,17 @@ highlight Search ctermbg=green ctermfg=black
 " 'tabstop' at its default value: 
 " http://vim.wikia.com/wiki/Indenting_source_code
 
-" Indentation settings for using 4 spaces instead of tabs.
-set softtabstop=4
+" Indentation settings for using 2 spaces instead of tabs.
+set softtabstop=2
 
 " Number of space characters inserted for indentation
-set shiftwidth=4
+set shiftwidth=2
 
 " Insert space characters whenever the tab key is pressed
 set expandtab
 
 " Number of spaces that will be inserted when the tab key is pressed
-" set tabstop=4
+" set tabstop=2
 
 " Copy the indentation from the previous line, when starting a new line.
 " It can be useful for structured text files, or when you want to 
