@@ -1,2 +1,47 @@
+# vim:ft=zsh
+
 # https://support.apple.com/en-us/HT208050
-# .zshrc is equivalent to .bashrc and runs for each new Terminal session
+# -> .zshrc is equivalent to .bashrc and runs for each new Terminal session
+# https://apple.stackexchange.com/questions/51036/what-is-the-difference-between-bash-profile-and-bashrc
+
+################################################################################
+# PATH
+################################################################################
+  
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+# sbin is for binaries with superuser (root) privileges required
+
+# User specific environment and startup programs
+# PATH=$PATH:$HOME/.local/bin:$HOME/bin
+# export PATH
+
+################################################################################
+# WORK CONFIG
+################################################################################
+
+if [ -f $HOME/.zprofile_ryte ]; then
+  source $HOME/.zprofile_ryte
+fi
+
+################################################################################
+# ALIASES
+################################################################################
+
+# misc
+alias cdl='cd && clear'
+alias chrome="open -a \"Google Chrome\""
+alias path='echo -e ${PATH//:/\\n}'
+#alias diskfree='df -H'
+#alias diskusage='du -ch'
+
+# navigation
+alias ll='echo -en " \033[1;33m--> \033[0m" && echo -n $PWD && echo -e "\033[1;33m <-- \033[0m" && ls -lh'
+alias ls='ls -G' # recursive calls (using ls in alias calls the aliased ls)
+
+# grep
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# docker
+alias docker-cleanup='docker system prune -af --volumes'

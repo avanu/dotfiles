@@ -1,18 +1,11 @@
+# vim:ft=zsh
+
 # https://support.apple.com/en-us/HT208050
-# .zprofile is equivalent to .bash_profile and runs at login, including over SSH
-#
+# -> .zprofile is equivalent to .bash_profile and runs at login, including over SSH
+# https://apple.stackexchange.com/questions/51036/what-is-the-difference-between-bash-profile-and-bashrc
 
-vim:ft=sh
-
-# path
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-
-# include .bashrc_aliases file if it exists
-if [ -f $HOME/.bashrc_aliases ]; then
-  . $HOME/.bashrc_aliases
+# consolidate `.zshrc` and `zprofile`
+if [ -f $HOME/.zshrc ]; then
+  source $HOME/.zshrc
 fi
 
-# include work Ryte if it exists
-if [ -f $HOME/.bashrc_ryte ]; then
-  . $HOME/.bashrc_ryte
-fi

@@ -11,6 +11,12 @@ ln -fs ~/.dotfiles/bash/bash_profile ~/.bash_profile
 ln -fs ~/.dotfiles/bash/bashrc_aliases ~/.bashrc_aliases
 ```
 
+## zsh
+```sh
+ln -fs ~/.dotfiles/bash/zprofile ~/.zprofile
+ln -fs ~/.dotfiles/bash/zshrc ~/.zshrc
+```
+
 ## Sublime Text 3
 ```bash
 ln -fs ~/.dotfiles/sublime-text/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings
