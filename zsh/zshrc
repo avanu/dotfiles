@@ -4,9 +4,9 @@
 # -> .zshrc is equivalent to .bashrc and runs for each new Terminal session
 # https://apple.stackexchange.com/questions/51036/what-is-the-difference-between-bash-profile-and-bashrc
 
-################################################################################
+#==============================================================================#
 # PATH
-################################################################################
+#==============================================================================#
   
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # sbin is for binaries with superuser (root) privileges required
@@ -15,17 +15,17 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # PATH=$PATH:$HOME/.local/bin:$HOME/bin
 # export PATH
 
-################################################################################
+#==============================================================================#
 # WORK CONFIG
-################################################################################
+#==============================================================================#
 
 if [ -f $HOME/.zprofile_ryte ]; then
   source $HOME/.zprofile_ryte
 fi
 
-################################################################################
+#==============================================================================#
 # ALIASES
-################################################################################
+#==============================================================================#
 
 # misc
 alias cdl='cd && clear'
@@ -45,3 +45,59 @@ alias fgrep='fgrep --color=auto'
 
 # docker
 alias docker-cleanup='docker system prune -af --volumes'
+
+#==============================================================================#
+# ZSH OPTIONS (Miscellaneous)
+#==============================================================================#
+
+# Since we want globbing to be case-insensitive, we want to turn the option off
+setopt NO_CASE_GLOB
+
+# When you mistype a command or path, the shell will make a guess of what you 
+# meant to type and ask whether you want do that instead
+setopt CORRECT
+setopt CORRECT_ALL
+
+#==============================================================================#
+# ZSH OPTIONS (Prompt)
+#==============================================================================#
+
+# expand parameters and substitute commands in your prompt
+# setopt PROMPT_SUBST
+
+#==============================================================================#
+# ZSH OPTIONS (Shell History)
+#==============================================================================#
+
+# By default, zsh does not save its history when the shell exits. The history 
+# is forgotten when you close a Terminal window or tab. To make zsh save its 
+# history to a file when it exits, you need to set a variable in the shell
+HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
+
+# Set limits on how many commands the shell should remember in the session
+HISTSIZE=2000
+
+# Set limits on how many commands the shell should remember in the history file
+SAVEHIST=5000
+
+# Share history between all sessions
+setopt SHARE_HISTORY
+
+# Add a bit more data to the shell history entries (timestamp in unix epoch 
+# time and elapsed time of the command)
+setopt EXTENDED_HISTORY
+
+# adds commands as they are typed, not at shell exit
+setopt INC_APPEND_HISTORY
+
+# do not store duplications in the history
+setopt HIST_IGNORE_DUPS
+
+#ignore duplicates when searching
+setopt HIST_FIND_NO_DUPS
+
+# removes blank lines from history
+setopt HIST_REDUCE_BLANKS
+
+# Do not execute immediately upon history expansion
+# setopt HIST_VERIFY

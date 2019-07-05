@@ -5,7 +5,8 @@
 # https://apple.stackexchange.com/questions/51036/what-is-the-difference-between-bash-profile-and-bashrc
 
 # consolidate `.zshrc` and `zprofile`
-if [ -f $HOME/.zshrc ]; then
-  source $HOME/.zshrc
-fi
+# if [ -f $HOME/.zshrc ]; then
+#   source $HOME/.zshrc
+# fi
+# consolidating may not be necessary: https://scriptingosx.com/2019/06/moving-to-zsh-part-2-configuration-files
 
