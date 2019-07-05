@@ -12,8 +12,12 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # sbin is for binaries with superuser (root) privileges required
 
 # User specific environment and startup programs
-# PATH=$PATH:$HOME/.local/bin:$HOME/bin
-# export PATH
+# export PATH=$PATH:$HOME/.local/bin:$HOME/bin
+
+# for LLVM
+# see https://formulae.brew.sh/formula/llvm
+# run `brew info llvm`
+export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 #==============================================================================#
 # WORK CONFIG
