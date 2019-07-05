@@ -13,7 +13,6 @@ ln -fs ~/.dotfiles/bash/bashrc_aliases ~/.bashrc_aliases
 
 ## zsh
 ```sh
-ln -fs ~/.dotfiles/bash/zprofile ~/.zprofile
 ln -fs ~/.dotfiles/bash/zshrc ~/.zshrc
 ```
 
