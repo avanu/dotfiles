@@ -13,7 +13,7 @@ ln -fs ~/.dotfiles/bash/bashrc_aliases ~/.bashrc_aliases
 
 ## zsh
 ```sh
-ln -fs ~/.dotfiles/bash/zshrc ~/.zshrc
+ln -fs ~/.dotfiles/zsh/zshrc ~/.zshrc
 ```
 
 ## Sublime Text 3
