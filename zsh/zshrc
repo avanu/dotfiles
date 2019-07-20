@@ -81,7 +81,8 @@ setopt CORRECT_ALL
 
 # custom PROMPT (WIP)
 # http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
-#export PROMPT='%m %1~ %# '
+#export PROMPT='|%n| %1~ %# '
+export PROMPT='| %1~ %# '
 
 #==============================================================================#
 # ZSH OPTIONS (Shell History)
