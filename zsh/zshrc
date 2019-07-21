@@ -69,8 +69,9 @@ setopt NO_CASE_GLOB
 
 # When you mistype a command or path, the shell will make a guess of what you 
 # meant to type and ask whether you want do that instead
-setopt CORRECT
-setopt CORRECT_ALL
+#setopt CORRECT
+#setopt CORRECT_ALL
+# I disabled this b/c it was really annoying
 
 #==============================================================================#
 # ZSH OPTIONS (Prompt)
