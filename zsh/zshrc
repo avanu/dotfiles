@@ -49,7 +49,8 @@ alias path='echo -e ${PATH//:/\\n}'
 #alias diskusage='du -ch'
 
 # navigation
-alias ll='echo -en " \033[1;33m--> \033[0m" && echo -n $PWD && echo -e "\033[1;33m <-- \033[0m" && ls -lh'
+#alias ll='echo -en " \033[1;33m--> \033[0m" && echo -n $PWD && echo -e "\033[1;33m <-- \033[0m" && ls -lh'
+alias ll='echo -en "> \033[1;33m" && echo -n $PWD && echo -e "\033[0m <" && ls -lh'
 alias ls='ls -G' # recursive calls (using ls in alias calls the aliased ls)
 
 # grep
