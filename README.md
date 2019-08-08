@@ -40,9 +40,8 @@ ln -fs ~/.dotfiles/vim/vimrc ~/.vimrc
 ## Git
 ```bash
 # https://help.github.com/articles/ignoring-files/
+ln -fs ~/.dotfiles/git/gitconfig ~/.gitconfig
 ln -fs ~/.dotfiles/git/gitignore_global ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
-
-git config --global user.name "<tbd>"
-git config --global user.email "<tbd>"
+cp ~/.dotfiles/git/gitconfig-ryte ~/.gitconfig-ryte
 ```
