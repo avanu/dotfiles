@@ -19,7 +19,7 @@
   br = branch
   cm = commit
   st = status
-  pl = pull --all --prune
+  pl = pull --all --prune --recurse-submodules
 
   # List alias commands
   la = "!git config -l | grep alias | cut -c 7-"
