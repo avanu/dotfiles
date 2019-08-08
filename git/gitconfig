@@ -30,5 +30,8 @@
   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
   lll = log -u
 
+  # check config
+  check-config = config --get user.email
+
 [includeIf "gitdir:~/Developer/Ryte/code/"]
   path = ~/.gitconfig-ryte
