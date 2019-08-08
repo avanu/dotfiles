@@ -1,0 +1,24 @@
+[user]
+  name = Alex Vanu
+  email = alex.vanu@gmail.com
+
+[core]
+  excludesfile = ~/.gitignore_global
+
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+
+[gui]
+  recentrepo = /Users/av/ryte/code/dev-guidelines
+
+[alias]
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
+
+[includeIf "gitdir:~/Developer/Ryte/code/"]
+  path = ~/.gitconfig-ryte
