@@ -2,8 +2,8 @@
 " ================================================================
 
 " appearance
-colorscheme base16-default-light
-set guifont=PragmataPro:h13
+colorscheme solarized
+set guifont=PragmataPro:h14
 set background=light
 
 " use visual bell

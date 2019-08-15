@@ -4,6 +4,7 @@
 
 " PATHOGEN
 " ---------------------------------------------------------------------- 
+
 " enable the pathogen plugin manager
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
@@ -11,6 +12,7 @@ execute pathogen#infect()
 
 " PLUGIN SETTINGS
 " ---------------------------------------------------------------------- 
+
 " vim-markdown: disable folding
 " let g:vim_markdown_folding_disabled=1
 "
@@ -90,8 +92,10 @@ highlight MatchParen ctermbg=darkgreen ctermfg=white
 highlight IncSearch ctermbg=yellow ctermfg=black
 highlight Search ctermbg=green ctermfg=black
 
+
 " INDENTATION
 " ---------------------------------------------------------------------- 
+
 " For indentation without tabs, the principle is to set 'expandtab', and 
 " set 'shiftwidth' and 'softtabstop' to the same value, while leaving 
 " 'tabstop' at its default value: 
