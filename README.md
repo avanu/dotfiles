@@ -42,6 +42,6 @@ ln -fs ~/.dotfiles/vim/vimrc ~/.vimrc
 # https://help.github.com/articles/ignoring-files/
 ln -fs ~/.dotfiles/git/gitconfig ~/.gitconfig
 ln -fs ~/.dotfiles/git/gitignore_global ~/.gitignore_global
-git config --global core.excludesfile ~/.gitignore_global
-cp ~/.dotfiles/git/gitconfig-ryte ~/.gitconfig-ryte
+#git config --global core.excludesfile ~/.gitignore_global
+ln -fs ~/.dotfiles/git/gitconfig-ryte ~/.gitconfig-ryte
 ```
