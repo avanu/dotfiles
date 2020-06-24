@@ -6,7 +6,7 @@
   excludesfile = ~/.gitignore_global
 
 [pull]
-  rebase = true
+  rebase = false
 
 [filter "lfs"]
   required = true
