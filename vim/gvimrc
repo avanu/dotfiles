@@ -2,8 +2,8 @@
 " ================================================================
 
 " appearance
-colorscheme solarized
-set guifont=PragmataPro:h14
+colorscheme macvim
+set guifont=SFMono-Regular:h13
 set background=light
 
 " use visual bell
