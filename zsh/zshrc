@@ -19,10 +19,6 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # run `brew info llvm`
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 
-# for Python
-#export PATH="~/Python/3.7/bin:$PATH"
-#export PATH="~/Python/3.7/lib:$PATH"
-
 #==============================================================================#
 # LOCALE
 #==============================================================================#
@@ -35,6 +31,13 @@ export LC_ALL=en_US.UTF-8
 
 if [ -f $HOME/.zprofile_ryte ]; then
   source $HOME/.zprofile_ryte
+fi
+
+#==============================================================================#
+# PYENV CONFIG
+#==============================================================================#
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
 fi
 
 #==============================================================================#
@@ -66,6 +69,8 @@ alias docker-cleanup='docker system prune -af --volumes'
 # ZSH OPTIONS (Miscellaneous)
 #==============================================================================#
 
+# https://wiki.archlinux.org/index.php/Zsh#Configure_Zsh
+
 # Since we want globbing to be case-insensitive, we want to turn the option off
 setopt NO_CASE_GLOB
 
@@ -74,6 +79,17 @@ setopt NO_CASE_GLOB
 #setopt CORRECT
 #setopt CORRECT_ALL
 # I disabled this b/c it was really annoying
+
+# Enable autocompletion
+autoload -Uz compinit
+compinit
+
+# autocompletion with an arrow-key driven interface
+zstyle ':completion:*' menu select
+
+# autocompletion of command line switches for aliases
+setopt COMPLETE_ALIASES
+
 
 #==============================================================================#
 # ZSH OPTIONS (Prompt)
