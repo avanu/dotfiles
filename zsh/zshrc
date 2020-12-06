@@ -105,8 +105,10 @@ function settitle() {
 
 # custom PROMPT (WIP)
 # http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
+# https://scriptingosx.com/2019/07/moving-to-zsh-06-customizing-the-zsh-prompt/
 #export PROMPT='|%n| %1~ %# '
-export PROMPT='%1~ %# '
+#export PROMPT='%1~ %# '
+export PROMPT=' %F{blue}%1~%f%F{yellow} %# %f'
 
 #==============================================================================#
 # ZSH OPTIONS (Shell History)
@@ -166,3 +168,9 @@ export LESS_TERMCAP_se=$'\e[0m'
 export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
+
+#==============================================================================#
+# ITERM2 SHELL INTEGRATION
+#==============================================================================#
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
