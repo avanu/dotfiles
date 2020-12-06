@@ -91,6 +91,10 @@ zstyle ':completion:*' menu select
 # autocompletion of command line switches for aliases
 setopt COMPLETE_ALIASES
 
+# function for setting the terminal title
+function settitle() {
+  echo -n -e "\033]0;$@\007"
+}
 
 #==============================================================================#
 # ZSH OPTIONS (Prompt)
