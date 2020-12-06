@@ -46,7 +46,7 @@ fi
 
 # misc
 alias cdl='cd && clear'
-alias chrome="open -a \"Google Chrome\""
+#alias chrome="open -a \"Google Chrome\""
 alias path='echo -e ${PATH//:/\\n}'
 alias pwd='echo -en "\033[1;33m" && pwd && echo -en "\033[0m"'
 #alias diskfree='df -H'
@@ -64,6 +64,7 @@ alias fgrep='fgrep --color=auto'
 
 # docker
 alias docker-cleanup='docker system prune -af --volumes'
+alias docker-stopall='docker stop $(docker ps -aq)'
 
 #==============================================================================#
 # ZSH OPTIONS (Miscellaneous)
