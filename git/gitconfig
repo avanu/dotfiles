@@ -25,6 +25,7 @@
   br = branch
   cm = commit
   st = status
+  pu = pull
   pl = pull --all --prune --recurse-submodules
 
   # List alias commands
