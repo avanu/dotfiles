@@ -26,7 +26,7 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 export LC_ALL=en_US.UTF-8
 
 #==============================================================================#
-# WORK CONFIG
+# WORK CONFIG FILE
 #==============================================================================#
 
 if [ -f $HOME/.zprofile_ryte ]; then
@@ -34,11 +34,24 @@ if [ -f $HOME/.zprofile_ryte ]; then
 fi
 
 #==============================================================================#
-# PYENV CONFIG
+# PYENV CONFIGURATION
 #==============================================================================#
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
+
+#==============================================================================#
+# JDK CONFIGURATION
+#==============================================================================#
+# setting java version
+set_jdk() {
+        version=$1
+        export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
+        #java -version
+ }
+
+set_jdk 1.8
 
 #==============================================================================#
 # ALIASES
