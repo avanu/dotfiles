@@ -3,6 +3,9 @@
 # https://support.apple.com/en-us/HT208050
 # -> .zshrc is equivalent to .bashrc and runs for each new Terminal session
 # https://apple.stackexchange.com/questions/51036/what-is-the-difference-between-bash-profile-and-bashrc
+#
+# https://shreevatsa.wordpress.com/2008/03/30/zshbash-startup-files-loading-order-bashrc-zshrc-etc/
+# -> difference between .zshrc and .zprofile
 
 #==============================================================================#
 # PATH

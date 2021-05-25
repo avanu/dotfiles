@@ -1,30 +1,16 @@
 # Dotfiles
 
+## This Repository
 ```bash
 cd ~
 git clone git@github.com:avanu/dotfiles.git .dotfiles
 ```
 
-## bash
-```bash
-ln -fs ~/.dotfiles/bash/bash_profile ~/.bash_profile
-ln -fs ~/.dotfiles/bash/bashrc_aliases ~/.bashrc_aliases
-```
 
 ## zsh
 ```sh
 ln -fs ~/.dotfiles/zsh/zshrc ~/.zshrc
-```
-
-## Sublime Text 3
-```bash
-ln -fs ~/.dotfiles/sublime-text/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings
-```
-
-## tmux
-```bash
-ln -fs ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
-ln -fs ~/.dotfiles/tmux/tmux-startup-session.conf ~/.tmux-startup-session.conf
+ln -fs ~/.dotfiles/zsh/zprofile ~/.zprofile
 ```
 
 ## Vim
@@ -44,4 +30,18 @@ ln -fs ~/.dotfiles/git/gitconfig ~/.gitconfig
 ln -fs ~/.dotfiles/git/gitignore_global ~/.gitignore_global
 #git config --global core.excludesfile ~/.gitignore_global
 ln -fs ~/.dotfiles/git/gitconfig-ryte ~/.gitconfig-ryte
+```
+
+## Obsolete
+
+## bash
+```bash
+ln -fs ~/.dotfiles/bash/bash_profile ~/.bash_profile
+ln -fs ~/.dotfiles/bash/bashrc_aliases ~/.bashrc_aliases
+```
+
+### tmux
+```bash
+ln -fs ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
+ln -fs ~/.dotfiles/tmux/tmux-startup-session.conf ~/.tmux-startup-session.conf
 ```
